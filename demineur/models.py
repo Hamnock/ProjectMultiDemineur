@@ -8,3 +8,5 @@ class demineur(models.Model):
     Score = models.IntegerField
     Timer = models.FloatField(default=0.0)
     ScoreHautFait = models.IntegerField(default=0)
+    def __str__(self):
+        return self.Speudo
