@@ -54,7 +54,7 @@ Idées :
 - Multi : simultané (préciser qu'on verra avec le temps disposé)
 
 -	Mode normal, mode HEH
--	
+
 
 Mode HEH : 
 
