@@ -1,0 +1,48 @@
+body{
+    color:#4573b3; 
+}
+
+.caseVide {    
+    background-color:#6f6f6f;    
+    color: #ffffff;    
+    border:1px #000000 inset;    
+    width:15px;
+    height:15px;        
+    font-size:15px;
+    font-weight:bold;    
+    text-align:center;
+    vertical-align:middle;
+}
+
+.caseClique {    
+    background-color:#afafaf;    
+    color: #ffffff;    
+    border:1px #000000 inset;    
+    width:15px;
+    height:15px;    
+    font-size:15px;
+    font-weight:bold;    
+    text-align:center;
+    vertical-align:middle;
+}    
+
+.button{
+    border:solid 1px #89b7d1; 
+    color:#4573b3; 
+    font-size:10px;
+    padding:0px;
+}
+
+.input{
+    border:solid 1px #89b7d1; 
+    color:#4573b3; 
+    font-size:10px;
+    padding:0px;
+}
+
+.input_ro{
+    border: none; 
+    color:#4573b3; 
+    font-size:10px;
+    padding:0px;
+}
