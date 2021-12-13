@@ -24,21 +24,26 @@
         <div id="YName">
             <h1>Your name:</h1>
         </div>
-        
+
         <div class="pseudo">
-            <input type="text" id="YName" name="YNname" required
-            minlength="4" maxlength="30" size="20" value="{{ YNname }}">
+            <form><input type="text" id="YName" name="{{ YName }}" required="Required" minlength="4" maxlength="30" size="20"></form>
         </div>
+
         <div id="button">
             <div>
-                <button class="ModeNormal" method="POST">Mode Normal</button>
+                <button class="ModeNormal" onclick="window.location.href = ''" method="POST">Mode Normal</button>
             </div>
             <div>
-                <button class="ModeHEH" method="POST">Mode HEH</button>
+                <form action="forms.py" method="post">
+                    <label for="YName">Your name: </label>
+                    <input id="YName" type="text" name="YName" value="{{ YN_ame }}">
+                    <input type="submit" value="OK">
+                </form>
             </div>
         </div>
 
     </main>
 
 </body>
+
 </html>
