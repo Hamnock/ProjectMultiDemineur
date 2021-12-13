@@ -1,0 +1,15 @@
+<script>
+        function ChangeBg(){
+            const images = [
+                'url("img/Accueil0.gif")',
+                'url("img/Accueil1.gif")',
+                'url("img/Accueil2.gif")',
+                'url("img/Accueil3.gif")',
+                'url("img/Accueil4.gif")',
+            ]
+
+            const body = document.querySelector('body')
+            const bg = images[Math.floor(Math.random()*images.length)];
+            body.style.backgroundImage = bg
+        }
+    </script>
