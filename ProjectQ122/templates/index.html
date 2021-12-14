@@ -22,7 +22,7 @@
 
     <main>
         <div id="YName">
-            <h1>Your name:</h1>
+            <h1>Your name: {{ prenom }} </h1>
         </div>
 
         <div class="pseudo">
@@ -34,10 +34,13 @@
                 <button class="ModeNormal" onclick="window.location.href = ''" method="POST">Mode Normal</button>
             </div>
             <div>
-                <form action="forms.py" method="post">
-                    <label for="YName">Your name: </label>
-                    <input id="YName" type="text" name="YName" value="{{ YN_ame }}">
-                    <input type="submit" value="OK">
+                <form action="add" method="post">
+                    {% csrf_token %}
+                    <label>Your number: </label>
+                    <input id="num1" type="text" name="num1">
+                    <input id="num2" type="text" name="num2">
+                    <p>{{ result }}</p>
+                    <input type="submit">
                 </form>
             </div>
         </div>
