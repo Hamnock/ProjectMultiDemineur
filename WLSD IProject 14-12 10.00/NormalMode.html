@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Démineur, Malaise, Depreter, Desmet, Pietrzac">
+    <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
+    <title>DHEHmineur</title>
+    <link rel="stylesheet" href="NormalMod.css">
+</head>
+
+<body onload="ChangeBg()">
+
+    <header>
+        <div id="timer" onclick="timer()">000</div>
+        <h1><a href="index.html">DHEHmineur</a></h1>
+        <div id="score" onclick="score()">000</div>
+
+    </header>   
+    
+
+
+    
+    <script>
+
+        var time = 0;
+        setInterval(timer, 1000)
+        function timer() {
+            time += 1
+            document.getElementById("timer").innerHTML = time
+        }
+
+        var Pscore = 000;
+        function score() {
+            Pscore += 100
+            document.getElementById("score").innerHTML = Pscore
+            
+        }
+
+        function ChangeBg(){
+            const images = [
+                'url("img/Accueil0.gif")',
+                'url("img/Accueil1.gif")',
+                'url("img/Accueil2.gif")',
+                'url("img/Accueil3.gif")',
+                'url("img/Accueil4.gif")',
+            ]
+
+            const body = document.querySelector('body')
+            const bg = images[Math.floor(Math.random()*images.length)];
+            body.style.backgroundImage = bg
+        }
+
+        document.getElementById("Score").innerHTML = varTime
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: ArcadeN ;                          
+    src: url(fonts/ARCADE_N.TTF);               
+  }    
+  
+  @font-face {
+    font-family: ArcadeR ;                          
+    src: url(fonts/ARCADE_R.TTF);               
+  }   
+
+  @font-face {
+      font-family: ArcadeI;
+      src: url(fonts/ARCADE_I.TTF);
+  }
+
+
+body header{
+    display: flex;
+    justify-content: space-between;
+}
+
+body header h1{
+    font-family: ArcadeN, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    font-size: 70px;
+}
+
+
+body header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+body header div#timer, #score{
+    font-family: ArcadeI, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+
+}
+
+
+
+
+
+
+
