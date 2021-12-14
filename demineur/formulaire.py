@@ -4,4 +4,4 @@ from .models import demineur
 class users(ModelForm):
     class Meta:
         model = demineur
-        fields=["Speudo","MDP"]
+        fields=["Login","Password"]
