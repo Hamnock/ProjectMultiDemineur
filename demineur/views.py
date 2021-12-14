@@ -1,7 +1,8 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render 
+from django.shortcuts import render , redirect
 from datetime import datetime
 from django.http import HttpResponseRedirect
+from .formulaire import users
 
 
 def index(request):
@@ -16,3 +17,11 @@ def add(request):
 
 def name(request):
      return render(request, "name.html", context={"prenon": "Patric"})
+
+def formulaire(request):
+     if request.method == "POST":
+          form = users(request.POST).save()
+          return redirect("/demineur")
+     else:
+          form = users()
+     return render(request, 'formulaire.html',{"form":form})

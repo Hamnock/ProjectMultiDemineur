@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms.widgets import PasswordInput
 
 # Create your models here.
 
