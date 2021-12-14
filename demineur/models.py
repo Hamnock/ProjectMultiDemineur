@@ -4,6 +4,7 @@ from django.db import models
 
 class demineur(models.Model):
     Speudo = models.CharField(max_length=128)
+    MDP = models.CharField(default="", max_length=128)
     Date = models.DateField(auto_now=True)
     Score = models.IntegerField(default=0)
     Timer = models.FloatField(default=0.0)
