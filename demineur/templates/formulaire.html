@@ -27,7 +27,10 @@
                 <h2>SignUp</h2>
                 <form method="POST" class ="post-form" id="form_id" name="myform">
                     {% csrf_token %}
-                    {{ form }}
+                    <label for="" class="label">UserName :</label>
+                    {{ form.Login }}
+                    <label>Password :</label>
+                    {{ form.Password }}
                     <button type="submit" class="save btn" id="submit"> SignUp</button>
                 </form>
             </div>

@@ -3,7 +3,6 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.shortcuts import render , redirect
 from datetime import datetime
 from django.http import HttpResponseRedirect
-
 from demineur.models import demineur
 from .formulaire import users
 
