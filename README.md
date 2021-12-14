@@ -58,6 +58,7 @@ Idées :
 
 Mode HEH : 
 
+- Combiner le jeu avec le Snake
 - Remplacer les bombes par le visage de certains profs en fonction du niveau de jeu
 -	Plus hard que le normal
 -	Enregistrer le rire des profs pour remplacer les explosions
