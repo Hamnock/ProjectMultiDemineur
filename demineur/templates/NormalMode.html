@@ -1,1 +1,79 @@
-<p>PUTE</p>
+{% load static%}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Démineur, Malaise, Depreter, Desmet, Pietrzac">
+    <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
+    <title>DHEHmineur</title>
+    <link rel="stylesheet" href=" {% static 'css/NormalMode.css' %}"> 
+</head>
+
+<body class="body" onload="ChangeBg();javascript:direct_new_game();get_high_score();maj_high_score();">
+
+    <header>
+        <div id="timer" onclick="timer()">0</div>
+        <h1><a href="../">DHEHmineur</a></h1>
+        <div id="score" onclick="score()"></div>
+    </header>
+
+    <section class="Menu">
+        <table border="1"align="center">
+            <tr>                    
+                <td colspan="2" align="center" onContextMenu="javascript:return active_cheat();" class="nvP">Nouvelle partie :</td>                    
+            </tr>
+            <tr>
+                <td>
+                    <table>        
+                        <tr>
+                            <td rowspan="3"> </td>
+                            <td align="right">Taille : </td>
+                            <td><input type='texte' name='largeur'  class="input"   size="2" maxlength="3" value='10'> x <input type='texte' name='hauteur'  class="input"   size="2" maxlength="3" value='10'></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Mines : </td>
+                            <td><input type='texte' name='nb_mine'  class="input"  size="2" maxlength="3" value='10'></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center"><input name="NewGame" type="button" class="button" value="Personnalise" onClick="javascript:new_game();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>                
+                                <input name="debutant" type="button" title="Plateau niveau débutant 10 par 10 avec 10 Mines" class="button" value="Debutant" onClick="javascript:new_game_debutant();">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>                
+                                <input name="intermediaire" type="button" title="Plateau niveau intermédiaire 20 par 20 avec 40 Mines" class="button" value="Intermediaire" onClick="javascript:new_game_intermediaire();">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="expert" type="button" title="Plateau niveau expert 30 par 20 avec 100 Mines" class="button" value="Expert" onClick="javascript:new_game_expert();">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+                
+        <br>
+        <div class="d-flex-center">
+            <div style="position:relative;" id="tableau" oncontextmenu="return false"></div>        
+        </div>
+    </section>
+    <div class="d-flex-center">
+        <a onclick="reload()" class = "reload">Relancer</a>
+    </div>
+    <script src="{% static 'JS/NormalMode.js' %}"></script>
+</body>
+
+</html>

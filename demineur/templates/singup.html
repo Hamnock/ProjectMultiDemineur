@@ -1,0 +1,32 @@
+{% load static%}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Genshin Impact, Personnages, Compétences, Builds, Capacités">
+    <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
+    <title>Démineur</title>
+    <link rel="stylesheet" href=" {% static 'css/singup.css' %}"> 
+</head>
+    
+<body>
+    <h1><a href="../">DHEHmineur</a></h1>
+        <div class="container">
+            <div class="main">
+                <h2>SignUp</h2>
+                <form method="POST" class ="post-form" id="form_id" name="myform">
+                    {% csrf_token %}
+                    <label for="" class="label">UserName :</label>
+                    {{ form.Login }}
+                    <label>Password :</label>
+                    {{ form.Password }}
+                    <button type="submit" class="save btn" id="submit"> SignUp</button>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

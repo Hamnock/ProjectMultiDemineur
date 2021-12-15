@@ -23,12 +23,13 @@ def name(request):
 def NormalMode(request):
      return render(request, "NormalMode.html" )
 
-def formulaire(request):
+
+def singup(request):
      if request.method == "POST":
           
           form = users(request.POST).save()
           
-          return redirect("/demineur")
+          return redirect("/")
      else:
           form = users()
-     return render(request, 'formulaire.html',{"form":form})
+     return render(request, 'singup.html',{"form":form})

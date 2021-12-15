@@ -20,6 +20,19 @@ body{
     background-image: url(../media/Login.jpg);
 }
 
+body h1{
+  font-family: ArcadeN, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  padding: 50px 0 30px 0;
+  font-size: 70px;
+
+}
+
+body h1 a {
+  text-decoration: none;
+  color: black;
+}
+
 h2{
 background-color: #FEFFED;
 padding: 30px 35px;

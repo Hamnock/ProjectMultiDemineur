@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
 
-    path("demineur/",include("demineur.urls")),
+    path("",include("demineur.urls")),
   
     
     
