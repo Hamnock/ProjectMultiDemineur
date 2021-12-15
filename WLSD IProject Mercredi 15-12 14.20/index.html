@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Genshin Impact, Personnages, Compétences, Builds, Capacités">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Logo.png">
+    <title>DHEHmineur</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="ChangeBg()">
+    <header>
+        <h1><a href="index.html">DHEHmineur</a></h1>
+        <label for="menu-cb" class="menu-label">
+            <img src="img/navbar.png" alt="">
+        </label>
+        <input id="menu-cb" type="checkbox" class="menu-cb">
+        <nav class="menu-nav">
+            <ul>
+                <li class="menu-item"><a href="Login.html">Login</a></li>
+                <li class="menu-item"><a href="Signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="YName">
+            <h1 id="LoginUserName">Your name:</h1>
+        </div>
+
+        <form action="/your-name/" method="post">
+            <div class="pseudo">
+                <input type="text" id="YName" name="YName" required="Required" minlength="4" maxlength="30"
+                    size="20">
+            </div>
+        </form>
+
+        <div id="button">
+            <div>
+                <button class="ModeNormal" onclick="window.location.href = 'NormalMode.html'" method="Post">Mode
+                    Normal</button>
+            </div>
+            <div>
+                <button class="ModeHEH" onclick="window.location.href = 'HEHMode.html'">Mode HEH</button>
+            </div>
+        </div>
+
+        <!--
+        <form action="/your-name/" method="post">
+            <label for="your_name">Your name: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+            <input type="submit" value="OK">
+        </form>
+        -->
+    </main>
+
+    <script src="js/Index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Genshin Impact, Personnages, Compétences, Builds, Capacités">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Logo.png">
+    <title>DHEHmineur - HEHMode</title>
+    <link rel="stylesheet" href="css/HEHMode.css">
+</head>
+
+<body onload="ChangeBg()">
+    <h1><a href="index.html">DHEHmineur</a></h1>
+    <div id="app" class="app">
+        <div class="start-screen animated bounceIn">
+            <h3>DemineSnake</h3>
+
+            <div class="options">
+                <h3>Choisissez la difficulte :</h3>
+                <p class="end-score"></p>
+                <button data-difficulty="100" class="active">Facile</button>
+                <button data-difficulty="75">Intermediaire</button>
+                <button data-difficulty="50">Difficile</button>
+            </div>
+
+            <button class="play-btn">Play</button>
+        </div>
+
+        <canvas></canvas>
+
+        <div class="score">0</div>
+    </div>
+
+    <script src="js/HEHMode.js"></script>
+</body>
+
+</html>
