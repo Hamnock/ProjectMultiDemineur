@@ -20,21 +20,24 @@
     </form>
 
 <body>
-    
+    <h1><a href="../">DHEHmineur</a></h1>
         
         <div class="container">
             <div class="main">
-                <h2>SignUp</h2>
+                <h2>Login</h2>
                 <form method="POST" class ="post-form" id="form_id" name="myform">
                     {% csrf_token %}
                     <label for="" class="label">UserName :</label>
-                    {{ form.Login }}
+                    <input type="text" name="username" id="username" autocomplete="off" />
                     <label>Password :</label>
-                    {{ form.Password }}
-                    <button type="submit" class="save btn" id="submit"> SignUp</button>
+                    <input type="password" name="password" id="password" />
+                    <button type="submit" class="Login" id="submit"> Login</button>
+                    
                 </form>
             </div>
         </div>
+
+        <script src="{% static 'JS/test.js' %}"></script>
 </body>
 
 </html>
