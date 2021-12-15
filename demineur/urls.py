@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import index, name, add, singup, NormalMode,login_user,iflogin
+from . import views
+from .views import index, name, singup, NormalMode,login_user,iflogin
 
 urlpatterns = [
     path('', index , name="demineur-index"),
@@ -7,6 +8,6 @@ urlpatterns = [
     path('iflogin', iflogin, name="page iflogin"),
     path('name', name, name="page name"),
     path('NormalMode', NormalMode, name="page NormalMode"),
-    path('add', add, name="page ADD"),
     path('singup', singup, name="page formulaire"),
+    path('logout_user', views.logout_user, name="logout"),
 ]

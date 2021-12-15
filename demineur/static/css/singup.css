@@ -20,6 +20,13 @@ body{
     background-image: url(../media/Login.jpg);
 }
 
+body header nav ul li a {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+  font-family: ArcadeN;
+}
+
 body h1{
   font-family: ArcadeN, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
@@ -92,4 +99,54 @@ font-family: ArcadeN;
 
 #submit:hover{
 background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+
+body header label img{
+  height: 5vh;
+}
+
+.menu-label,.menu-cb {
+  cursor: pointer;
+  appearance: none;
+  position: fixed;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 30px;
+  z-index: 4;
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  max-width: 400px;
+  padding-top: 110px;
+  text-align: right;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  transform: translateX(110%);
+  transition: transform 0.5s linear;
+  -webkit-box-shadow: -8px 0px 20px 6px rgb(0,0,0,0.8);
+  box-shadow: -8px 0px 20px 6px rgb(0,0,0,0.8);
+}
+
+.menu-item {
+  padding: 0.5em 20px 55px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.menu-cb:checked ~ .menu-nav {
+  transform: translateX(0);
+}
+
+.menu-cote {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

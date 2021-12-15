@@ -10,11 +10,6 @@ from django.contrib import messages
 def index(request):
      return render(request, "index.html", context={"prenon": "Patric"})
 
-def add(request):
-    val1= int(request.POST["num1"])
-    val2= int(request.POST["num2"])
-    res = val1 + val2
-    return render(request, "index.html", context={"result": res})
 
 
 def name(request):
@@ -26,7 +21,7 @@ def NormalMode(request):
 def iflogin(request):
      return render(request, "iflogin.html" )
 
-
+#request pour un utilisateur dans le demineur
 def singup(request):
      if request.method == "POST":
           
@@ -37,7 +32,7 @@ def singup(request):
           form = users()
      return render(request, 'singup.html',{"form":form})
 
-
+#request pour pouvoir se connecter en fonction des users deja creer
 def login_user(request):
      if request.method == "POST":
        username = request.POST["username"]
@@ -50,3 +45,8 @@ def login_user(request):
                return redirect("/login")
      else:     
           return render(request, 'login.html')
+
+
+def logout_user(request):
+          logout(request)
+          return redirect('/')
