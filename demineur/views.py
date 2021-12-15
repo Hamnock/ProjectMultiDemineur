@@ -20,6 +20,9 @@ def add(request):
 def name(request):
      return render(request, "name.html", context={"prenon": "Patric"})
 
+def NormalMode(request):
+     return render(request, "NormalMode.html" )
+
 def formulaire(request):
      if request.method == "POST":
           

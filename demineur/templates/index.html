@@ -10,43 +10,51 @@
     <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
     <title>Démineur</title>
     <link rel="stylesheet" href=" {% static 'css/style.css' %}"> 
-    <script src="{% static 'JS/test.js' %}"></script>
+    
 </head>
     
-<body>
+
+<body onload="ChangeBg()">
     <header>
-        <h1>
-            DHEHmineur
-        </h1>
-    </header>   
+        <h1><a href="index.html">DHEHmineur</a></h1>
+        <label for="menu-cb" class="menu-label">
+            <svg viewBox="0 0 32 32" fill="#666">
+                <rect x="0" y="4" rx="3" ry="3" width="32" height="3" />
+                <rect x="0" y="14" rx="3" ry="3" width="32" height="3" />
+                <rect x="0" y="24" rx="3" ry="3" width="32" height="3" />
+            </svg>
+        </label>
+        <input id="menu-cb" type="checkbox" class="menu-cb">
+        <nav class="menu-nav">
+            <ul>
+                <li class="menu-item"><a href="Login.html">Login</a></li>
+                <li class="menu-item"><a href="Signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <div id="YName">
             <h1>Your name:</h1>
         </div>
 
-        <div class="pseudo">
-            <form><input type="text" id="YName" name="YName" required="Required" minlength="4" maxlength="30" size="20"></form>
-        </div>
+        <form action="/your-name/" method="post">
+            <div class="pseudo">
+                <input type="text" id="YName" name="name" required="Required" minlength="4" maxlength="30"
+                    size="20">
+            </div>
+        </form>
 
         <div id="button">
             <div>
-                <button class="ModeNormal" onclick="window.location.href = ''" method="POST">Mode Normal</button>
+                <button class="ModeNormal" onclick="window.location.href = 'NormalMode'" method="Post">Mode Normal</button>
             </div>
             <div>
-                <form action="add" method="post">
-                    {% csrf_token %}
-                    <label>Your number: </label>
-                    <input id="num1" type="text" name="num1">
-                    <input id="num2" type="text" name="num2">
-                    <p>{{ result }}</p>
-                    <input type="submit">
-                </form>
+                <button class="ModeHEH" onclick="window.location.href = 'HEHMode'">Mode HEH</button>
             </div>
         </div>
-
     </main>
-
+    <script src="{% static 'JS/test.js' %}"></script>
 </body>
 
 </html>
