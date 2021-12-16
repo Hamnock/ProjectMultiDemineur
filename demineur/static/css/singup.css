@@ -1,109 +1,112 @@
 
 @font-face {
-    font-family: ArcadeN ;                          
-    src: url(../font/ARCADE_N.TTF);               
-  }    
-  
-  @font-face {
-    font-family: ArcadeR ;                          
-    src: url(../font/ARCADE_R.TTF);               
-  }   
+  font-family: ArcadeN ;                          
+  src: url(../font/ARCADE_N.TTF);               
+}    
 
-  @font-face {
-      font-family: ArcadeI;
-      src: url(../font/ARCADE_I.TTF);
-  }
+@font-face {
+  font-family: ArcadeR ;                          
+  src: url(../font/ARCADE_R.TTF);               
+}   
 
+@font-face {
+    font-family: ArcadeI;
+    src: url(../font//ARCADE_I.TTF);
+}
+
+@font-face {
+  font-family: Press2Play;
+  src: url(../font/PressStart2P-Regular.ttf);
+}  
 
 
 body{
-    background-image: url(../media/Login.jpg);
-}
-
-body header nav ul li a {
-  color: #fff;
-  font-size: 32px;
-  text-decoration: none;
-  font-family: ArcadeN;
-}
-
-body h1{
-  font-family: ArcadeN, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  padding: 50px 0 30px 0;
-  font-size: 70px;
-
-}
-
-body h1 a {
-  text-decoration: none;
-  color: black;
+  background-image: url("../media/Accueil3.gif");
 }
 
 h2{
-background-color: #FEFFED;
-padding: 30px 35px;
-margin: -10px -50px;
-text-align:center;
-border-radius: 10px 10px 0 0;
-font-family: ArcadeR;
-}
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px 35px;
+  margin: -10px -50px;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  font-family: ArcadeR;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.8)  ; 
+  -webkit-box-shadow: 0 12px 50px rgba(0, 0, 0, 0.8)  ; 
+  -moz-box-shadow: 0 12px 50px rgba(0, 0, 0, 0.8)  ; 
+  }
+  
+  body div div form{
+      padding-top: 3em;
+  }
+  
+  div.container{
+  display: flex;
+  justify-content: center;
+  margin:60px auto;
+  }
+  
+  div.main{
+  width: 300px;
+  padding: 10px 50px 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-family: ArcadeR;
+  float:left;
+  margin-top:50px;
+  }
+  
+  input[type=text],input[type=password]{
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  color: black;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: Press2Play;
+  }
+  
+  
+  button.Login{
+  font-size: 16px;
+  background: #F4C8D4;
+  border: 1px solid #F4C8D4;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+  outline:none;
+  font-family: Press2Play;
+  }
+  
+  button.savebtn:hover{
+  background: #E9BFCA;
+  }
 
-body div div form{
-    padding-top: 3em;
-}
-
-div.container{
-display: flex;
-justify-content: center;
-margin:60px auto;
-}
-
-div.main{
-width: 300px;
-padding: 10px 50px 25px;
-border: 3px solid black;
-border-radius: 10px;
-font-family: ArcadeR;
-float:left;
-margin-top:50px;
-}
-
-input[type=text],input[type=password]{
-width: 100%;
-height: 40px;
-padding: 5px;
-margin-bottom: 25px;
-margin-top: 5px;
-border: 2px solid #ccc;
-color: black;
-font-size: 16px;
-border-radius: 5px;
-font-family: ArcadeN;
-}
-
-
-#submit{
-font-size: 16px;
-background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
-border: 1px solid #e5a900;
-color: black;
-font-weight: bold;
-cursor: pointer;
-width: 100%;
-border-radius: 5px;
-padding: 10px 0;
-outline:none;
-font-family: ArcadeN;
-}
-
-#submit:hover{
-background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
-}
-
-body header label img{
-  height: 5vh;
-}
+  button.savebtn{
+    font-size: 16px;
+    background: #F4C8D4;
+    border: 1px solid #F4C8D4;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline:none;
+    font-family: Press2Play;
+    }
+    
+    button.Login:hover{
+    background: #E9BFCA;
+    }
+  
 
 .menu-label,.menu-cb {
   cursor: pointer;
@@ -149,4 +152,16 @@ body header label img{
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+body header nav ul li a {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+  font-family: ArcadeN;
+}
+
+
+body header label img{
+  height: 5vh;
 }

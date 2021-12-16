@@ -6,38 +6,35 @@
     <meta name="author" content="WLSD-IProject">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Démineur pimpé par nos soins">
-    <meta name="keywords" content="Genshin Impact, Personnages, Compétences, Builds, Capacités">
     <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
     <title>Démineur</title>
     <link rel="stylesheet" href=" {% static 'css/singup.css' %}"> 
 </head>
-    
 <body>
     <header>
-        <h1>DHEHmineur</h1>
         <label for="menu-cb" class="menu-label">
             <img src="/static/media/navbar.png" alt="">
         </label>
         <input id="menu-cb" type="checkbox" class="menu-cb">
         <nav class="menu-nav">
-            <ul>
+            <ul>    
                 <li class="menu-item"><a href="../">Home</a></li>
             </ul>
         </nav>
-    </header>
-        <div class="container">
-            <div class="main">
-                <h2>SignUp</h2>
-                <form method="POST" class ="post-form" id="form_id" name="myform">
-                    {% csrf_token %}
-                    <label for="" class="label">UserName :</label>
-                    {{ form.Login }}
-                    <label>Password :</label>
-                    {{ form.Password }}
-                    <button type="submit" class="save btn" id="submit"> SignUp</button>
-                </form>
-            </div>
+    </header>   
+    <div class="container">
+        <div class="main">
+            <h2>SignUp</h2>
+            <form id="form_id" method="post" name="myform">
+                {% csrf_token %}
+                <label>UserName :</label>
+                {{ form.Login }}
+                <label>Password :</label>
+                {{ form.Password }}
+                <button type="submit" class="savebtn" id="submit"> SignUp</button>
+            </form>
         </div>
+    </div>
 </body>
-
+<script src="{% static 'JS/test.js' %}"></script>
 </html>

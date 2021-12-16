@@ -14,6 +14,9 @@ def index(request):
 def NormalMode(request):
      return render(request, 'NormalMode.html')
 
+def hehmode(request):
+     return render(request, 'hehmode.html')
+
 
 def table(request):
      all_table = demineur.objects.all
