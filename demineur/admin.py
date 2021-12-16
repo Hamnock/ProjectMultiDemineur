@@ -4,3 +4,4 @@ from .models import demineur
 # Register your models here.
 
 admin.site.register(demineur)
+

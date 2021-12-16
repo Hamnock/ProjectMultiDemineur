@@ -1,4 +1,4 @@
-audioF = new Audio("static/mdedia/Flag.mp3")
+audioF = new Audio("/static/mdedia/Flag.mp3")
 var time = 0;
 setInterval(timer, 1000)
 function timer() {
@@ -338,7 +338,7 @@ function click_on_case() {
         }
         else {
 
-            ma_case.innerHTML = "<img src=\"mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+            ma_case.innerHTML = "<img src=\"../static/media/mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
             ma_case.style.background = "#FF0000";
 
             alert("Désolé vous avez perdu. Merci d'avoir joué.");
@@ -421,7 +421,7 @@ function context_on_case() {
 
     if (this.is_drapeau) {
 
-        this.innerHTML = "<img src=\"intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+        this.innerHTML = "<img src=\"../static/media/intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
 
         this.is_drapeau = false;
         this.is_intero = true;
@@ -565,3 +565,4 @@ function active_cheat() {
 function reload() {
     location.reload();
 }
+

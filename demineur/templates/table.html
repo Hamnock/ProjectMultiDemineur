@@ -1,0 +1,68 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="WLSD-IProject">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Démineur pimpé par nos soins">
+    <meta name="keywords" content="Démineur">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Logo.png">
+    <title>DHEHmineur</title>
+    <link rel="stylesheet" href=" {% static 'css/table.css' %}"> 
+    
+</head>
+
+<body onload="ChangeBg(), table_settings()"> <!--On intègre les JS-->
+    <header>
+        <h1>DHEHmineur</h1>
+        <label for="menu-cb" class="menu-label">
+            <img src="/static/media/navbar.png" alt="">
+        </label>
+        <input id="menu-cb" type="checkbox" class="menu-cb">
+        <nav class="menu-nav">
+            <ul>
+                <li  name="btnlogout" class="menu-item">
+                    <form name='logout_user' method="post">
+                    {% csrf_token %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                    </form>
+                </li>
+                <li class="menu-item"><a href="../iflogin">Home</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main>
+        <h1>Tableau des scores</h1> <!--Titre simple-->
+
+        <div class="white_B"> <!--fond blanc-->
+            <table id="test" cellspacing="0"> <!--Contient le tabeau-->
+                <thead>
+                    <tr><th>Pseudo :</th>
+                        <th>Temps :</th>
+                        <th>Score :</th>
+                        <th>Hauts faits :</th>
+                    </tr> <!--Haut du tableau-->
+                </thead>
+                <tbody>
+                    {% for item in all%}
+                    <tr><th>{{ item.Login }}</th>
+                        <th>{{ item.Timer }}</th>
+                        <th>{{ item.Score }}</th>
+                        <th>{{ item.ScoreHautFait }}</th>
+                    </tr> <!--Haut du tableau-->
+                    {% endfor%}
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </main>
+
+    <script src="{% static 'JS/table.js' %}"></script>
+</body>
+</html>

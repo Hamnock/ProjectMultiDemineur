@@ -1,22 +1,23 @@
+from django import forms
 from django.http.response import HttpResponse
 from django.shortcuts import render , redirect
 from datetime import datetime
 from django.http import HttpResponseRedirect
-from demineur.models import demineur
+from .models import demineur
 from .formulaire import users
 from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
 
 def index(request):
-     return render(request, "index.html", context={"prenon": "Patric"})
-
-
-
-def name(request):
-     return render(request, "name.html", context={"prenon": "Patric"})
+     return render(request, "index.html")
 
 def NormalMode(request):
-     return render(request, "NormalMode.html" )
+     return render(request, 'NormalMode.html')
+
+
+def table(request):
+     all_table = demineur.objects.all
+     return render(request, "table.html",{"all":all_table} )
 
 def iflogin(request):
      return render(request, "iflogin.html" )
@@ -25,8 +26,9 @@ def iflogin(request):
 def singup(request):
      if request.method == "POST":
           
-          form = users(request.POST).save()
-          
+          form = users(request.POST or None)
+          if form.is_valid():
+               form.save()
           return redirect("/")
      else:
           form = users()

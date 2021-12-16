@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import models
 from django.forms.widgets import PasswordInput
 from .models import demineur
 
@@ -18,3 +19,4 @@ class users(forms.ModelForm):
     class Meta:
         model = demineur
         fields=["Login","Password"]
+
