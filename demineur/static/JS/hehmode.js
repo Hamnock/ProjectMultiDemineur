@@ -1,6 +1,8 @@
 var dir = "droite";
 var taille = 0;
 
+var liste = [{x:0 , y:0}]
+
 audioF = new Audio("static/media/Flag.mp3")
 audioBg = new Audio("static/media/background.mp3")
 audioBg.play();
@@ -116,6 +118,7 @@ function new_game_expert() {
   document.all['hauteur'].value = 20;
   document.all['largeur'].value = 30;
   nb_mine = document.all['nb_mine'].value = 100;
+  liste = [{x:0 , y:0}]
   new_game();
 }
 
@@ -124,6 +127,7 @@ function new_game_intermediaire() {
   document.all['hauteur'].value = 20;
   document.all['largeur'].value = 20;
   nb_mine = document.all['nb_mine'].value = 40;
+  liste = [{x:0 , y:0}]
   new_game();
 }
 
@@ -131,7 +135,8 @@ function new_game_intermediaire() {
 function new_game_debutant() {
   document.all['hauteur'].value = 10;
   document.all['largeur'].value = 10;
-  nb_mine = document.all['nb_mine'].value = 10;
+  nb_mine = document.all['nb_mine'].value = 10; 
+  liste = [{x:0 , y:0}]
   new_game();
 }
 
@@ -328,7 +333,6 @@ function click_on_case() {
   }
 
   //La case sur laquelle on à cliqué.
-  console.log("iagbekfjh",liste, liste[liste.length-1])
   ma_case = document.getElementById("gameTable").children[liste[liste.length-1].y].children[liste[liste.length-1].x];
   if (ma_case.is_mine) {
     clearInterval(interval)
@@ -369,7 +373,6 @@ function click_on_case() {
         alert("Désolé vous avez perdu. Merci d'avoir joué.");
 
         game_over = true;
-
         return;
     }
   }
@@ -576,7 +579,6 @@ function reload() {
   location.reload();
 }
 
-var liste = [{x:0 , y:0}]
 var pressclick = false
 var color = "#6f6f6f"
 
