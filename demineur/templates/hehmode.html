@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Démineur pimpé par nos soins">
     <meta name="keywords" content="Démineur, Malaise, Depreter, Desmet, Pietrzac">
-    <!--<link rel="shortcut icon" type="image/x-icon" href="img/TabLogo.png">-->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/media/Logo.png">
     <title>DHEHmineur</title>
     <link rel="stylesheet" href=" {% static 'css/hehmode.css' %}">
     <link rel="shortcut icon" href="#">
@@ -18,7 +18,7 @@
 
     <header>
         <div id="timer" onclick="timer()">000</div>
-        <h1><a href="iflogin">DHEHmineur</a></h1>
+        <h1><a href="../">DHEHmineur</a></h1>
         <div id="score">000</div>
     </header>
 
@@ -26,7 +26,7 @@
     <section class="Menu">
         <table border="1"align="center">
             <tr>                    
-                <td colspan="2" align="center" onContextMenu="javascript:return active_cheat();" class="nvP">Nouvelle partie :</td>                    
+                <td colspan="2" align="center" onContextMenu="javascript:return active_cheat();" class="nvP">Nouvelle partie : {{user.username}}</td>                    
             </tr>
             <tr>
                 <td>

@@ -1,10 +1,21 @@
-audioF = new Audio("/static/mdedia/Flag.mp3")
+audioF = new Audio("static/media/Flag.mp3")
 var time = 0;
 setInterval(timer, 1000)
 function timer() {
     time += 1
-    document.getElementById("timer").innerHTML = time
-}
+    if (time == 0) {
+      document.getElementById("timer").innerHTML = "000"
+    }
+  
+    else if (time < 10) {
+      document.getElementById("timer").innerHTML = "00" + time
+    }
+  
+    else if (time < 100) {
+      document.getElementById("timer").innerHTML = "0" + time
+    }
+    
+  }
 
 var Pscore = 000;
 function score() {
@@ -91,7 +102,6 @@ function direct_new_game() {
     place_mine();
 
     //On réinit les paramètres divers...
-    document.all['mine_reste'].value = nb_reste;
     game_over = false;
     first_click = true;
     time = 1;
@@ -316,7 +326,7 @@ function click_on_case() {
     }
     //La case  était une mine... Domage.
     else if (ma_case.is_mine) {
-
+              
         //Permier clique sur une mine, on esquive.
         if (first_click) {
 
@@ -337,8 +347,8 @@ function click_on_case() {
             }
         }
         else {
-
-            ma_case.innerHTML = "<img src=\"../static/media/mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+            audioF.play()
+            ma_case.innerHTML = "<img src=\"static/media/mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
             ma_case.style.background = "#FF0000";
 
             alert("Désolé vous avez perdu. Merci d'avoir joué.");
@@ -358,6 +368,7 @@ function click_on_case() {
 
             if (cases[i][j] == this) {
                 degage_case(i, j);
+                score()
             }
         }
     }
@@ -421,7 +432,7 @@ function context_on_case() {
 
     if (this.is_drapeau) {
 
-        this.innerHTML = "<img src=\"../static/media/intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+        this.innerHTML = "<img src=\"static/media/intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
 
         this.is_drapeau = false;
         this.is_intero = true;
@@ -439,8 +450,7 @@ function context_on_case() {
     }
     else {
 
-        this.innerHTML = "<img src=\"../static/media/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
-        audioF.play()        
+        this.innerHTML = "<img src=\"static/media/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";     
         this.is_drapeau = true;
         this.is_intero = false;
 
@@ -549,8 +559,8 @@ function active_cheat() {
         alert("Mode triche désactivé.");
     }
     else {
-        mdp = prompt("Veuillez entrer le cheat-code pour activer le Mode triche SVP.");
-        if (mdp == "help my minesweeper") {
+        mdp = prompt("Veuillez entrer le cheat-code pour activer le Mode triche.");
+        if (mdp == "Cogliandro") {
             mode_cheat = true;
             alert("Mode triche activé, Merci.");
         }
@@ -565,4 +575,3 @@ function active_cheat() {
 function reload() {
     location.reload();
 }
-

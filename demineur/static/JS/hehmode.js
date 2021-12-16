@@ -2,6 +2,8 @@ var dir = "droite";
 var taille = 0;
 
 audioF = new Audio("static/media/Flag.mp3")
+audioBg = new Audio("static/media/background.mp3")
+audioBg.play();
 var time = 0;
 var interval = setInterval(timer, 1000)
 
@@ -29,11 +31,10 @@ function score() {
 
 function ChangeBg() {
   const images = [
-    'url("/static/media/Accueil0.gif")',
-    'url("/static/media/Accueil1.gif")',
-    'url("/static/media/Accueil2.gif")',
-    'url("/static/media/Accueil3.gif")',
-    'url("/static/media/Accueil4.gif")',
+    'url("/static/media/Bgheh0.jpg")',
+    'url("/static/media/Bgheh1.jpg")',
+    'url("/static/media/Bgheh2.jpg")',
+    'url("/static/media/Bgheh3.jpg")',
   ]
 
   const body = document.querySelector('body')
@@ -361,15 +362,15 @@ function click_on_case() {
       }
     }
     else {
+        audioF.play()
+        ma_case.innerHTML = "<img src=\"mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+        ma_case.style.background = "#FF0000";
 
-      ma_case.innerHTML = "<img src=\"static/media/mine.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
-      ma_case.style.background = "#FF0000";
+        alert("Désolé vous avez perdu. Merci d'avoir joué.");
 
-      alert("Désolé vous avez perdu. Merci d'avoir joué.");
+        game_over = true;
 
-      game_over = true;
-
-      return;
+        return;
     }
   }
 
@@ -438,7 +439,7 @@ function context_on_case() {
 
   if (caseici.is_drapeau) {
 
-    caseici.innerHTML = "<img src=\"static/media/intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+    caseici.innerHTML = "<img src=\"img/intero.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
 
     caseici.is_drapeau = false;
     caseici.is_intero = true;
@@ -452,7 +453,7 @@ function context_on_case() {
   }
   else {
 
-    caseici.innerHTML = "<img src=\"static/media/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+    caseici.innerHTML = "<img src=\"img/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
     audioF.play()
     caseici.is_drapeau = true;
     caseici.is_intero = false;
@@ -633,7 +634,7 @@ document.addEventListener('keydown', event => {
     case 16:
       var caseici = document.getElementById("gameTable").children[liste[liste.length-1].y].children[liste[liste.length-1].x]
       if (!caseici.classList.contains("drapeau")) {
-        var htmldrap = "<img src=\"/static/media/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
+        var htmldrap = "<img src=\"static/media/drapeau.gif\" width=\"" + TAILLE_IMG + "\" height=\"" + TAILLE_IMG + "\">";
         caseici.innerHTML = htmldrap
         caseici.classList.add("drapeau")
       } else {
@@ -668,4 +669,4 @@ document.addEventListener('keydown', event => {
   console.log(event.keyCode);
 });
 
-setInterval(move, 500)
+setInterval(move, 400)
